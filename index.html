@@ -6,185 +6,168 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400|Source+Code+Pro:400|Work+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:600,900|Open+Sans:300,400,600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e0cb9a35ac.js"></script>
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="name">
-          <h1>Nick Jenvey</h1>
-          <span class="subtitle">Designer/Developer</span>
-        </div>
-        <div class="contact">
+    <div class="container">
+
+      <aside>
+        <header>
+          <div class="headshot"></div>
+        </header>
+        <article class="contact">
           <ul>
-            <li><a href="tel:6046570627"><i class="fas fa-phone-alt"></i> (604)657-0627</a></li>
-            <li><a href="mailto:nick@nickjenvey.com"><i class="fas fa-envelope"></i> nick@nickjenvey.com</a></li>
-            <li><a href="https://nickjenvey.com/" target="_blank"><i class="fas fa-globe"></i> nickjenvey.com</a></li>
-            <li><a href="https://github.com/nickjenvey" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nickjenvey/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a class="phone" href="tel:6046570627"><i class="fas fa-mobile-alt"></i></a></li>
+            <li><a class="email" href="mailto:nick@nickjenvey.com"><i class="fas fa-envelope"></i></a></li>
+            <li><a class="website" href="https://nickjenvey.com/" target="_blank"><i class="fas fa-desktop"></i></a></li>
+            <li><a class="github" href="https://github.com/nickjenvey" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/in/nickjenvey/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
           </ul>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="container">
+        </article>
+        <article class="skills">
+          <h2>Professional Skills</h2>
+          <div class="skills__list">
+            <ul>
+              <li>Strong creative and analytical thinking skills with great attention to detail.</li>
+              <li>Comfortable working in fast-paced environments while able to multitask effectively.</li>
+              <li>Ability to work individually or in a team with effective communication (verbal & written).</li>
+              <li>Implementing and managing project timelines and client expectations.</li>
+            </ul>
+          </div>
+          <h2>Languages & Systems</h2>
+          <div class="skills__list">
+            <p>JavaScript, React, HTML, SCSS, CSS, GIT, jQuery, AJAX, Knex, MongoDB, PostgreSQL, WordPress, PHP</p>
+          </div>
+          <h2>Design Programs</h2>
+          <div class="skills__list">
+            <p>Photoshop, Illustrator, inDesign, Sketch, Balsamiq, Unbounce, inVision, AutoCAD</p>
+          </div>
+        </article>
+      </aside>
 
-        <div class="top">
+      <main>
+        <header>
+          <h1>Nick Jenvey</h1>
+          <h2>Designer + Developer</h2>
+        </header> <!-- End header -->
 
-          <div class="sum-edu">
+        <article class="summary">
+          <p>I'm an Designer/Developer based in Vancouver. I hold over 5 years of agency experience designing visually appealing and functional interfaces across a wide range of industries. I create interfaces that enable interaction, inspire and intensify a user’s experience.</p>
+        </article> <!-- End summary -->
 
-            <div class="sum">
-              <h2 class="sum-title">Summary</h2>
-              <p>I'm an Designer/Developer based in Vancouver. I hold over 5 years of agency experience designing visually appealing and functional interfaces across a wide range of industries. I create interfaces that enable interaction, inspire and intensify a user’s experience.</p>
-            </div><!-- END SUM -->
+        <article class="education">
+          <h2>Education</h2>
+          <div class="education__course">
+            <h3>Lighthouse Labs</h3>
+            <h4>Web Development Diploma - August 2019</h4>
+            <p>A 600 hour 10 week full-stack bootcamp covering topics such as computer science, software architecture, JavaScript, HTML, CSS, PostregSQL, Knex, React, Ruby, and much more. </p>
+          </div>
+          <div class="education__course">
+            <h3>British Columbia Institute of Technology</h3>
+            <h4>Senior Management Certificate - October 2012</h4>
+            <p>An intense two-year into one program creating visually appealing graphics, attention grabbing online videos, and user-friendly websites. Hands-on experience through a 100-hour practicum.</p>
+          </div>
+        </article> <!-- End education -->
 
-            <div class="edu">
-              <h2 class="edu-title">Education</h2>
-              <div class="course">
-                <h3>Lighthouse Labs</h3>
-                <h4>Web Development Diploma - August 2019</h4>
-                <p>A 600 hour 10 week full-stack bootcamp covering topics such as computer science, software architecture, JavaScript, HTML, CSS, PostregSQL, Knex, React, Ruby, and much more. </p>
-              </div>
-              <div class="course">
-                <h3>British Columbia Institute of Technology</h3>
-                <h4>Senior Management Certificate - October 2012</h4>
-                <p>An intense two-year into one program creating visually appealing graphics, attention grabbing online videos, and user-friendly websites. Hands-on experience through a 100-hour practicum.</p>
-              </div>
-            </div><!-- END EDU -->
+        <article class="employment">
+          <h2>Employment History</h2>
+          <div class="employment__job">
+            <h3>Wine Works</h3>
+            <h4>Front-end Web Developer: March 2017 - October 2018</h4>
+            <ul>
+              <li>Responsible for development of both in-house and client provided designs using the most current coding standards and conventions.</li>
+              <li>Assessed clients sales objectives and tailored the user-experience to reflect those goals.</li>
+              <li>Became the first in-house designer and allowed the company to begin offering design services.</li>
+              <li>Designed visually appealing online store fronts that focused on user-experience and interactivity.</li>
+              <li>Produced comprehensive wireframe designs.</li>
+            </ul>
+          </div>
+          <div class="employment__job">
+            <h3>Steady Studios</h3>
+            <h4>Web Designer: November 2015 - April 2017</h4>
+            <ul>
+              <li>Designed user interfaces that placed emphasis on human experience and increased brand awareness.</li>
+              <li>Worked with the development team to determine design solutions while working within their requirements.</li>
+              <li>Assisted branding team with various aspects of design projects (style guides, logo design, brochure design, etc).</li>
+            </ul>
+          </div>
+          <div class="employment__job">
+            <h3>Novacode</h3>
+            <h4>Co-founder/Web Designer: June 2015 - March 2017</h4>
+            <ul>
+              <li>Responsible for creating all design assets from concept to final hand-off to development.</li>
+              <li>Worked with clients to define their vision and ensure all designs were inline with their needs and goals.</li>
+              <li>Managed client expectations and created timelines & work flows for development team.</li>
+              <li>Assisted the development team to complete projects with tight deadlines.</li>
+            </ul>
+          </div>
+          <div class="employment__job">
+            <h3>Megacast</h3>
+            <h4>Visual Designer: January 2013 - June 2016</h4>
+            <ul>
+              <li>Created display advertisements and print brochures for marketing purposes.</li>
+              <li>Designed mobile responsive websites for companies in a multitude of industries.</li>
+              <li>Built lead generation landing pages and monitored page analytics to ensure goals were being met.</li>
+              <li>Participated in the creation of brand identities (logo creation, color palette, print and web-based materials, and style guides, etc).</li>
+            </ul>
+          </div>
+        </article> <!-- End employment -->
 
-          </div><!-- END SUM-EDU -->
+        <article class="projects">
+          <h2>Projects</h2>
+          <div class="projects__item">
+            <h3>
+              <a href="https://github.com/nickjenvey/pickle-decision-maker" target="_blank">Pickle - Decision Maker</a>
+            </h3>
+            <p>A full-stack web application helping users make a decision between a number of given options. User's are able to generate new polls, manage their polls and see results, and share their polls with friends using a unique link allowing them to vote!</p>
+          </div>
+          <div class="projects__item">
+            <h3>
+              <a href="https://github.com/nickjenvey/tweeter" target="_blank">Tweeter</a>
+            </h3>
+            <p>Single-page Twitter replica built with HTML, CSS, jQuery, Ajax and MongoDB. On top of the intensive work on front-end features, Tweeter also showcases dynamic use of databases and data-generation.</p>
+          </div>
+          <div class="projects__item">
+            <h3>
+              <a href="https://github.com/nickjenvey/tinyapp" target="_blank">TinyApp</a>
+            </h3>
+            <p>A simple URL-shortening web application built with node.js and Express. First week-long project at Lighthouse Labs. Project necessitated a thorough understanding of how HTTP works, templating, and the value of modular code.</p>
+          </div>
+          <div class="projects__item">
+            <h3>
+              <a href="https://nickjenvey.com/wp-content/uploads/2018/05/BMW-Design-Experiment-2018.jpg" target="_blank">BMW Design Experiment</a>
+            </h3>
+            <p>As a car enthusiast, I decided to gain some hands-on experience with Sketch by doing a concept project for BMW’s newest arrival – the BMW M4 Coupé.</p>
+          </div>
+          <div class="projects__item">
+            <h3>
+              <a href="https://www.jeffersonvineyards.com/" target="_blank">Jefferson Vineyards</a>
+            </h3>
+            <p>Jefferson Vineyards is a family owned winery and vineyard in Charlottesville, Virginia, located where Thomas Jefferson and Philip Mazzei first grew grapes almost 250 years ago. The redesign focused on creating a more robust experience for customers by introducing an online store, and by adding the rich history of the lands.</p>
+          </div>
+          <div class="projects__item">
+            <h3>
+              <a href="https://commerce7.com/" target="_blank">Commerce7</a>
+            </h3>
+            <p>Commerce7 is a new customer centric ecommerce platform for the alcohol industry. Marketing sites can be straightforward, but with Commerce7, it required a bit more thought to convey the benefits of everything they provided: easy customer checkout experience, payment processing, club benefits, and personalization.</p>
+          </div>
+          <div class="projects__item">
+            <h3>
+              <a href="https://nickjenvey.com/wp-content/uploads/2018/05/Spectra-Wines-2018.jpg" target="_blank">Spectra Wines</a>
+            </h3>
+            <p>Spectra Wines was created as the first ever demonstration project for Commerce7's new platform. The challenge was to create a web experience that was minimal yet visual-engaging, while also showcasing the platform's commerce technology and features.</p>
+          </div>
+          <div class="projects__item">
+            <h3>
+              <a href="http://riggit.com/" target="_blank">Riggit Services Inc.</i></a>
+            </h3>
+            <p>Riggit Services Inc. is a full service rigging company. They were looking to revamp their web presences with an all new website design and overhauled brand identity. The new site honors their commitment to the client experience, with easy-to-navigate actions, users flow to explore everything Riggit has to offer with ease, and use of photography and iconography for aesthetic benefit and storytelling.</p>
+          </div>
+        </article> <!-- End projects -->
+      </main>
 
-          <div class="skills">
-
-            <div class="skills-list">
-              <h2 class="proff-title">Professional Skills</h2>
-              <ul>
-                <li>Strong creative and analytical thinking skills with great attention to detail.</li>
-                <li>Comfortable working in fast-paced environments while able to multitask effectively.</li>
-                <li>Ability to work individually or in a team with effective communication (verbal & written).</li>
-                <li>Implementing and managing project timelines and client expectations.</li>
-              </ul>
-            </div><!-- END PROFESSIONAL SKILLS -->
-
-            <div class="skills-list">
-              <h2 class="lang-title">Languages & Systems</h2>
-                <p>JavaScript, React, HTML, SCSS, CSS, GIT, jQuery, AJAX, Knex, MongoDB, PostgreSQL, WordPress, PHP</p>
-            </div><!-- END LANGUAES & SYSTEMS SKILLS -->
-
-            <div class="skills-list">
-                <h2  class="prog-title">Design Programs</h2>
-                  <p>Photoshop, Illustrator, inDesign, Sketch, Balsamiq, Unbounce, inVision, AutoCAD</p>
-              </div><!-- END LANGUAES & SYSTEMS SKILLS -->
-
-          </div><!-- END SKILLS -->
-          
-        </div><!-- END TOP -->
-
-        <div class="mid">
-
-          <div class="projects">
-            <h2 class="proj-title">Projects</h2>
-
-            <div class="project">
-              <h3><a href="https://github.com/nickjenvey/pickle-decision-maker" target="_blank">Pickle - Decision Maker</a></h3>
-              <p>A full-stack web application helping users make a decision between a number of given options. User's are able to generate new polls, manage their polls and see results, and share their polls with friends using a unique link allowing them to vote!</p>
-            </div>
-
-            <div class="project">
-              <h3><a href="https://github.com/nickjenvey/tweeter" target="_blank">Tweeter</a></h3>
-              <p>Single-page Twitter replica built with HTML, CSS, jQuery, Ajax and MongoDB. On top of the intensive work on front-end features, Tweeter also showcases dynamic use of databases and data-generation.</p>
-            </div>
-
-            <div class="project">
-              <h3><a href="https://github.com/nickjenvey/tinyapp" target="_blank">TinyApp</a></h3>
-              <p>A simple URL-shortening web application built with node.js and Express. First week-long project at Lighthouse Labs. Project necessitated a thorough understanding of how HTTP works, templating, and the value of modular code.</p>
-            </div>
-
-            <div class="project">
-              <h3><a href="https://nickjenvey.com/wp-content/uploads/2018/05/BMW-Design-Experiment-2018.jpg" target="_blank">BMW Design Experiment</a></h3>
-              <p>As a car enthusiast, I decided to gain some hands-on experience with Sketch by doing a concept project for BMW’s newest arrival – the BMW M4 Coupé.</p>
-            </div>
-
-            <div class="project">
-              <h3><a href="https://www.jeffersonvineyards.com/" target="_blank">Jefferson Vineyards</a></h3>
-              <p>Jefferson Vineyards is a family owned winery and vineyard in Charlottesville, Virginia, located where Thomas Jefferson and Philip Mazzei first grew grapes almost 250 years ago. The redesign focused on creating a more robust experience for customers by introducing an online store, and by adding the rich history of the lands.</p>
-            </div>
-
-            <div class="project">
-              <h3><a href="https://commerce7.com/" target="_blank">Commerce7</a></h3>
-              <p>Commerce7 is a new customer centric ecommerce platform for the alcohol industry. Marketing sites can be straightforward, but with Commerce7, it required a bit more thought to convey the benefits of everything they provided: easy customer checkout experience, payment processing, club benefits, and personalization.</p>
-            </div>
-
-            <div class="project">
-              <h3><a href="https://nickjenvey.com/wp-content/uploads/2018/05/Spectra-Wines-2018.jpg" target="_blank">Spectra Wines</a></h3>
-              <p>Spectra Wines was created as the first ever demonstration project for Commerce7's new platform. The challenge was to create a web experience that was minimal yet visual-engaging, while also showcasing the platform's commerce technology and features.</p>
-            </div>
-
-            <div class="project">
-              <h3><a href="http://riggit.com/" target="_blank">Riggit Services Inc.</a></h3>
-              <p>Riggit Services Inc. is a full service rigging company. They were looking to revamp their web presences with an all new website design and overhauled brand identity. The new site honors their commitment to the client experience, with easy-to-navigate actions, users flow to explore everything Riggit has to offer with ease, and use of photography and iconography for aesthetic benefit and storytelling.</p>
-            </div>
-
-          </div><!-- END PROJECTS -->
-
-        </div><!-- END MID -->
-
-        <div class="bottom">
-
-          <div class="work-list">
-            <h2 class="work-title">Work Experience</h2>
-
-            <div class="work">
-              <h3>Wine Works</h3>
-              <h4>Front-end Web Developer: March 2017 - October 2018</h4>
-              <ul>
-                <li>Responsible for development of both in-house and client provided designs using the most current coding standards and conventions.</li>
-                <li>Assessed clients sales objectives and tailored the user-experience to reflect those goals.</li>
-                <li>Became the first in-house designer and allowed the company to begin offering design services.</li>
-                <li>Designed visually appealing online store fronts that focused on user-experience and interactivity.</li>
-                <li>Produced comprehensive wireframe designs.</li>
-              </ul>
-            </div>
-
-            <div class="work">
-              <h3>Steady Studios</h3>
-              <h4>Web Designer: November 2015 - April 2017</h4>
-              <ul>
-                <li>Designed user interfaces that placed emphasis on human experience and increased brand awareness.</li>
-                <li>Worked with the development team to determine design solutions while working within their requirements.</li>
-                <li>Assisted branding team with various aspects of design projects (style guides, logo design, brochure design, etc).</li>
-              </ul>
-            </div>
-
-            <div class="work">
-              <h3>Novacode</h3>
-              <h4>Co-founder/Web Designer: June 2015 - March 2017</h4>
-              <ul>
-                <li>Responsible for creating all design assets from concept to final hand-off to development.</li>
-                <li>Worked with clients to define their vision and ensure all designs were inline with their needs and goals.</li>
-                <li>Managed client expectations and created timelines & work flows for development team.</li>
-                <li>Assisted the development team to complete projects with tight deadlines.</li>
-              </ul>
-            </div>
-            
-            <div class="work">
-              <h3>Megacast</h3>
-              <h4>Visual Designer: January 2013 - June 2016</h4>
-              <ul>
-                <li>Created display advertisements and print brochures for marketing purposes.</li>
-                <li>Designed mobile responsive websites for companies in a multitude of industries.</li>
-                <li>Built lead generation landing pages and monitored page analytics to ensure goals were being met.</li>
-                <li>Participated in the creation of brand identities (logo creation, color palette, print and web-based materials, and style guides, etc).</li>
-              </ul>
-            </div>
-
-          </div><!-- END WORK-->
-
-        </div><!-- END BOTTOM -->
-
-      </div><!-- END CONTAINER -->
-    </main>
+    </div>
   </body>
 </html>

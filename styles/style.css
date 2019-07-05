@@ -1,225 +1,219 @@
+/* ========== Global ========== */
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #121421;
-  color: #979db1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.44444444;
+  background-color: #fff;
+  color: #696969;
+  padding: 50px 0;
 }
 
-main {
-  background-color: #1b1f30;
-  max-width: 900px;
-  margin: 0 auto 30px;
-  padding: 60px 30px;
-  box-sizing: border-box;
-  border-radius: 20px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Muli', sans-serif;
+  color: #1d1d1d;
 }
 
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-p {
-  line-height: 1.6;
-}
-
-h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 48px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-h2 {
-  font-family: 'Source Code Pro', monospace;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 10px 0;
-  display: inline-block;
-  margin-bottom: 20px;
-  color: #fff;
-  position: relative;
-}
-
-h2:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-}
-
-h2.sum-title:after {
-  background-color: #ff0097;
-  box-shadow: 0 0 20px 1px #ff0097;
-}
-
-h2.edu-title:after {
-  background-color: #00a300;
-  box-shadow: 0 0 20px 1px #00a300;
-}
-
-h2.proff-title:after {
-  background-color: #ee1111;
-  box-shadow: 0 0 20px 1px #ee1111;
-}
-
-h2.lang-title:after {
-  background-color: #00aba9;
-  box-shadow: 0 0 20px 1px #00aba9;
-}
-
-h2.prog-title:after {
-  background-color:  #ffc40d;
-  box-shadow: 0 0 20px 1px  #ffc40d;
-}
-
-h2.proj-title:after {
-  background-color: #9f00a7;
-  box-shadow: 0 0 20px 1px #9f00a7;
-}
-
-h2.work-title:after {
-  background-color: #2b5797;
-  box-shadow: 0 0 20px 1px #2b5797;
-}
-
-h3 {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-h3 a {
-  text-decoration: none;
-  color: #fff;
-}
-
-h3 a:hover {
-  color: #2d89ef;
-}
-
-h4 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  font-style: italic;
-  margin-bottom: 10px;
-  opacity: .5;
-}
-
-
-
-/* ####### HEADER ######## */
-header {
-  margin-top: 30px;
-  margin-bottom: 60px;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.subtitle {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 24px;
-  text-transform: capitalize;
-  color: #2d89ef;
-  text-shadow: 0 0 20px #2d89ef;
-}
-
-.contact {
-  flex: 0 0 350px;
-}
-
-.contact ul {
   display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center
+}
+/* ========== End Global ========== */
+
+
+
+/* ========== Sidebar ========== */
+aside {
+  flex: 0 0 250px;
+  padding: 40px;
+  background: #f5f5f5;
+  background: -moz-linear-gradient(top,  #f5f5f5 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%);
+  background: linear-gradient(to bottom,  #f5f5f5 0%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff',GradientType=0 );
 }
 
-.contact li {
-  margin: 0 0 10px 20px;
-  font-size: 14px;
+aside header {
+  margin-bottom: 48px;
 }
 
-.contact li a {
-  text-decoration: none;
-  color: #979db1;
+aside header .headshot {
+  background-image: url("../assets/img/headshot.png");
+  background-size: cover;
+  background-position: center center;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  box-shadow: 0 0 32px rgba(0,0,0,.1);
 }
 
-.contact li a:hover {
-  text-decoration: none;
-  color: #fff;
+aside .contact {
+  margin-bottom: 48px;
 }
 
-
-
-/* ####### TOP ######## */
-.top {
+aside .contact ul {
   display: flex;
   justify-content: space-between;
 }
 
-.sum-edu,
-.skills {
-  flex: 0 0 48%;
+aside .contact ul li a {
+  font-size: 32px;
+  color: #454545;
 }
 
-.sum,
-.skills-list {
-  margin-bottom: 40px;
+aside .contact ul li a.phone:hover {
+  color: #00acec;
+}
+aside .contact ul li a.email:hover {
+  color: #e5a430;
+}
+aside .contact ul li a.website:hover {
+  color: #fe0000;
+}
+aside .contact ul li a.github:hover {
+  color: #000;
+}
+aside .contact ul li a.linkedin:hover {
+  color: #0073b1;
 }
 
-.course {
-  margin-bottom: 30px;
+aside .skills {
+  position: sticky;
+  top: 30px;
 }
 
-.course:last-of-type {
-  margin-bottom: 0;
+aside .skills h2 {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.skills-list li {
-  margin-bottom: 10px;
-  line-height: 1.6;
+aside .skills .skills__list {
+  margin-bottom: 32px;
 }
 
+aside .skills .skills__list ul li {
+  margin-bottom: 8px;
+}
+/* ========== End Sidebar ========== */
 
 
-/* ####### MID ######## */
-.mid {
-  margin: 60px 0 50px;
-  padding: 50px 0 60px;
-  border-top: 2px dashed rgba(255,255,255,0.15);
-  border-bottom: 2px dashed rgba(255,255,255,0.15);
+
+/* ========== Main ========== */
+main {
+  flex: 0 1 700px;
+  padding: 0 50px;
 }
 
-.project {
-  margin-bottom: 30px;
+main header {
+  margin-bottom: 48px;
 }
 
-.project:last-of-type {
-  margin-bottom: 0;
+main header h1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 16px;
 }
 
-
-
-/* ####### BOTTOM ######## */
-.work {
-  margin-bottom: 30px;
+main header h2 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.work:last-of-type {
-  margin-bottom: 0;
+main .summary {
+  margin-bottom: 48px;
 }
 
-.work li {
-  margin-bottom: 10px;
-  line-height: 1.6;
+main .education {
+  margin-bottom: 48px;
 }
+
+main .education h2 {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main .education .education__course {
+  margin-bottom: 16px;
+}
+
+main .education .education__course h3 {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+main .education .education__course h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+main .employment {
+  margin-bottom: 48px;
+}
+
+main .employment h2 {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main .employment .employment__job {
+  margin-bottom: 16px;
+}
+
+main .employment .employment__job h3 {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+main .employment .employment__job h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+main .employment .employment__job ul li {
+  margin-bottom: 8px;
+}
+
+main .projects {
+  margin-bottom: 48px;
+}
+
+main .projects h2 {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main .projects .projects__item {
+  margin-bottom: 16px;
+}
+
+main .projects .projects__item h3 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+main .projects .projects__item h3 a {
+  color: #1d1d1d;
+  text-decoration: none;
+  border-bottom: 2px dotted #696969;
+}
+
+main .projects .projects__item h3 a:hover {
+  color: #fe0000;
+}
+/* ========== End Main ========== */
