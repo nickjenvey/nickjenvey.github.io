@@ -18,6 +18,16 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   justify-content: center
 }
+
+aside header,
+aside .contact,
+main header,
+main .summary,
+main .education,
+main .employment,
+main .projects {
+  margin-bottom: 48px;
+}
 /* ========== End Global ========== */
 
 
@@ -33,10 +43,6 @@ aside {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff',GradientType=0 );
 }
 
-aside header {
-  margin-bottom: 48px;
-}
-
 aside header .headshot {
   background-image: url("../assets/img/headshot.png");
   background-size: cover;
@@ -45,10 +51,6 @@ aside header .headshot {
   height: 250px;
   border-radius: 100%;
   box-shadow: 0 0 32px rgba(0,0,0,.1);
-}
-
-aside .contact {
-  margin-bottom: 48px;
 }
 
 aside .contact ul {
@@ -107,10 +109,6 @@ main {
   padding: 0 50px;
 }
 
-main header {
-  margin-bottom: 48px;
-}
-
 main header h1 {
   font-size: 64px;
   font-weight: 900;
@@ -121,14 +119,6 @@ main header h1 {
 main header h2 {
   font-size: 24px;
   font-weight: 600;
-}
-
-main .summary {
-  margin-bottom: 48px;
-}
-
-main .education {
-  margin-bottom: 48px;
 }
 
 main .education h2 {
@@ -144,7 +134,7 @@ main .education .education__course {
 }
 
 main .education .education__course h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
 }
 
@@ -152,10 +142,6 @@ main .education .education__course h4 {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
-}
-
-main .employment {
-  margin-bottom: 48px;
 }
 
 main .employment h2 {
@@ -171,7 +157,7 @@ main .employment .employment__job {
 }
 
 main .employment .employment__job h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
 }
 
@@ -183,10 +169,6 @@ main .employment .employment__job h4 {
 
 main .employment .employment__job ul li {
   margin-bottom: 8px;
-}
-
-main .projects {
-  margin-bottom: 48px;
 }
 
 main .projects h2 {
@@ -202,7 +184,7 @@ main .projects .projects__item {
 }
 
 main .projects .projects__item h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
   margin-bottom: 4px;
 }
@@ -214,6 +196,6 @@ main .projects .projects__item h3 a {
 }
 
 main .projects .projects__item h3 a:hover {
-  color: #fe0000;
+  color: #1264a3;
 }
 /* ========== End Main ========== */
