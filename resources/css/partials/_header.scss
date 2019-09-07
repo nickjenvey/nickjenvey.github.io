@@ -1,0 +1,31 @@
+header {
+  padding: 2.5rem 0;
+  width: 100%;
+
+  .container {
+    @media screen and (max-width: 650px) {
+      padding: 0 3.75rem;
+    }
+
+    @media screen and (max-width: 420px) {
+      padding: 0 1.875rem;
+    }
+
+    &.no-pad {
+      padding: 0 1.875rem;
+
+      @media screen and (max-width: 1035px) {
+        padding: 0 0.9375rem;
+      }
+    }
+  }
+  
+  .logo {
+    height: 3.4375rem;
+    width: 3.3125rem;
+    -webkit-user-select: none;     
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
