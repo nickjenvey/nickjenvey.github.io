@@ -1,220 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Nick Jenvey | Designer & Developer</title>
-  <link rel="shortcut icon" type="image/png" href="resources/images/favicon.ico"/>
-  <link rel="stylesheet" type="text/css" href="resources/css/main.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="resources/js/jquery.lazy.min.js"></script>
+  <meta charset="utf-8">
+  <title>Nick Jenvey — UX/UI Designer</title>
+  <meta name="description" content="Portfolio of Nick Jenvey">
+  <meta name="author" content="Nick Jenvey">
+  <meta name="keywords" content="nick, jenvey, CSS, HTML, HTML5, markup, style, web design, web development, ui, ux, design, vancouver">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="Hello robots and human. You found me you!">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
   <header>
-    <div class="container">
-      <div class="logo">
-        <a href="/">
-          <img src="resources/images/logo.svg" alt="Nick Jenvey" />
-        </a>
-      </div>
+    <div class="logo">
+      <a href="#">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 120 124.1" style="enable-background:new 0 0 120 124.1;" xml:space="preserve">
+        <path id="XMLID_6_" d="M0,0v124.1h120V0H0z M106.8,21.4l0,70.7L47.4,21.4H31.5l75.2,89.5H68.2L21.6,55.4v46.8h13.2V92l8.6,10.2v8.6
+        H12.9V31.5l59.4,70.7h15.8L12.9,12.7h38.5L98,68.2V21.4H84.8v10.2l-8.6-10.2h0v-8.6h30.5V21.4z"/>
+        </svg>
+      </a>
     </div>
+    <ul class="nav">
+      <li>
+        <a href="#">Work</a>
+      </li>
+      <li>
+        <a href="#">Resume</a>
+      </li>
+    </ul>
   </header>
-  <div class="about">
-    <div class="container">
-      <div class="about__intro">
-        <h1>Hi, I'm Nick Jenvey.</h1>
-        <p>I’m a designer & developer based in Vancouver, Canada. I create interfaces that enable interaction, inspire and intensify a user’s experience. Every project I work on is an entirely new and unique challenge, and I love it.</p>
-        <div class="social-media">
-          <a class="github-btn" href="https://github.com/nickjenvey"></a>
-          <a class="linkedin-btn" href="https://www.linkedin.com/in/nickjenvey/"></a>
-          <a class="email-btn" href="mailto:nick@nickjenvey.com"></a>
-          <a class="portfolio-btn" href="https://nickjenvey.com/"></a>
+
+  <div class="container">
+    <section class="hero">
+      <h1>I’m a UX/UI Designer based in Vancouver, Canada.</h1>
+      <p>Currently a UX/UI Designer at <a href="#">Sprung Studios.</a></p>
+    </section>
+    <section class="work">
+      <div class="row">
+        <div class="column">
+          <img class="home-img" src="Images/sprung_0.jpg">
+        </div>
+        <div class="column">
+          <p>Sprung Studios</p>
+          <h2>Creating exciting and intuitive gaming experiences</h2>
+          <p>
+            <a href="#">Read more →</a>
+          </p>
         </div>
       </div>
-      <div class="about__photo">
-        <img src="resources/images/headshot.png" />
+      <div class="row">
+        <div class="column">
+          <p>B2B Web Application</p>
+          <h2>Platform for partner engagement and content management</h2>
+          <p>
+            <a href="#">Read more →</a>
+          </p>
+        </div>
+        <div class="column">
+          <img class="home-img" src="Images/b2b_0.jpg">
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="column">
+          <img class="home-img" src="Images/spectra_0.jpg">
+        </div>
+        <div class="column">
+          <p>Commerce7</p>
+          <h2>Webtemplate for a new ecommerce platform</h2>
+          <p>
+            <a href="#">Read more →</a>
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
-  <div class="content">
+
+  <footer class="cta">
     <div class="container">
-      <div class="sidebar">
-        <div class="professional-skills">
-          <h2>Professional Skills</h2>
-          <ul>
-            <li>Strong creative and analytical thinking skills with great attention to detail.</li>
-            <li>Comfortable working in fast-paced environments while able to multitask effectively.</li>
-            <li>Ability to work individually or in a team with effective communication (verbal & written).</li>
-            <li>Implementing and managing project timelines and client expectations.</li>
-          </ul>
-        </div>
-        <div class="languages">
-          <h2>Languages & Systems</h2>
-          <p>JavaScript, React, HTML, SCSS, CSS, GIT, jQuery, AJAX, Knex, MongoDB, Node.js, Express PostgreSQL, WordPress, PHP, Ruby, Ruby on Rails, Mocha, Chai, RSpec</p>
-        </div>
-        <div class="design-skills">
-          <h2>Design Programs</h2>
-          <p>Photoshop, Illustrator, inDesign, Sketch, Balsamiq, Unbounce, inVision, AutoCAD</p>
-        </div>
-      </div>
-      <div class="resume">
-        <div class="education">
-          <h2>Education</h2>
-          <div class="content-block">
-            <h3>Lighthouse Labs</h3>
-            <h4>Web Development Diploma: August 2019</h4>
-            <p>A 600 hour 10 week full-stack bootcamp covering topics such as JavaScript, React, Node.js MongoDB, PostgreSQL, Ruby, Ruby on Rails, jQuery, HTML, CSS, and SASS, computer science, and software architecture.</p>
-          </div>
-          <div class="content-block">
-            <h3>British Columbia Institute of Technology</h3>
-            <h4>Senior Management Certificate: October 2012</h4>
-            <p>An intense two-year into one program creating visually appealing graphics, attention grabbing online videos, and user-friendly websites. Hands-on experience through a 100-hour practicum.</p>
-          </div>
-        </div>
-        <div class="employment-history">
-          <h2>Employment History</h2>
-          <div class="content-block">
-            <h3>Wine Works</h3>
-            <h4>Front End Web Developer: March 2017 - October 2018</h4>
-            <ul>
-              <li>Responsible for development of both in-house and client provided designs using the most current coding standards and conventions.</li>
-              <li>Assessed clients sales objectives and tailored the user-experience to reflect those goals.</li>
-              <li>Became the first in-house designer and allowed the company to begin offering design services.</li>
-              <li>Designed visually appealing online store fronts that focused on user-experience and interactivity.</li>
-              <li>Produced comprehensive wireframe designs.</li>
-              <li>Honed my self-management skills by working remotely while keeping staying on track with all projects.</li>
-            </ul>
-          </div>
-          <div class="content-block">
-            <h3>Steady Studios</h3>
-            <h4>Web Designer: November 2015 - April 2017</h4>
-            <ul>
-              <li>Designed user interfaces that placed emphasis on human experience and increased brand awareness.</li>
-              <li>Worked with the development team to determine design solutions while working within their requirements.</li>
-              <li>Assisted branding team with various aspects of design projects (style guides, logo design, brochure design, etc).</li>
-            </ul>
-          </div>
-          <div class="content-block">
-            <h3>Novacode</h3>
-            <h4>Co-founder/Web Designer: June 2015 - March 2017</h4>
-            <ul>
-              <li>Responsible for creating all design assets from concept to final hand-off to development.</li>
-              <li>Worked with clients to define their vision and ensure all designs were inline with their needs and goals.</li>
-              <li>Managed client expectations and created timelines & work flows for development team.</li>
-              <li>Developed exceptional verbal & visual communication skills through working closely with clients.</li>
-              <li>Assisted the development team to complete projects with tight deadlines.</li>
-            </ul>
-          </div>
-          <div class="content-block">
-            <h3>Megacast</h3>
-            <h4>Visual Designer: January 2013 - June 2016</h4>
-            <ul>
-              <li>Created display advertisements and print brochures for marketing purposes.</li>
-              <li>Designed mobile responsive websites for companies in a multitude of industries.</li>
-              <li>Exposure to the fast-paced life of the agency environment.</li>
-              <li>Built lead generation landing pages and monitored page analytics to ensure goals were being met.</li>
-              <li>Participated in the creation of brand identities (logo creation, color palette, print and web-based materials, style guides, etc).</li>
-            </ul>
-          </div>
-        </div>
-        <div class="design-projects">
-          <h2>Design Projects</h2>
-          <div class="content-block">
-            <a href="https://nickjenvey.com/resources/images/dji-full.png" target="_blank">
-              <h3>DJI Redesign Concept</h3>
-              <h4>Programs: Photoshop</h4>
-              <p>As I poke around the idea of possibly getting myself drone, I decided to give the DJI Mavic Pro product page a facelift worthy of this impressive piece of technology.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://nickjenvey.com/resources/images/spectra-full.png" target="_blank">
-              <h3>Spectra Wines</h3>
-              <h4>Programs: Photoshop, Illustrator</h4>
-              <p>Spectra Wines was created as the first ever demonstration project for Commerce7's new platform. The challenge was to create a web experience that was minimal yet visual-engaging, while also showcasing the platform's commerce technology and features.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://commerce7.com/" target="_blank">
-              <h3>Commerce7</h3>
-              <h4>Programs: Photoshop, Illustrator</h4>
-              <p>Commerce7 is a new customer centric ecommerce platform for the alcohol industry. Marketing sites can be straightforward, but with Commerce7, it required a bit more thought to convey the benefits of everything they provided: easy customer checkout experience, payment processing, club benefits, and personalization.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://nickjenvey.com/resources/images/bmw-full.png" target="_blank">
-              <h3>BMW Design Experiment</h3>
-              <h4>Programs: Sketch</h4>
-              <p>As a car enthusiast, I decided to gain some hands-on experience with Sketch by doing a concept project for BMW’s newest arrival – the BMW M4 Coupé.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="http://riggit.com/" target="_blank">
-              <h3>Riggit Services Inc.</h3>
-              <h4>Programs: Photoshop, Illustrator</h4>
-              <p>Riggit Services Inc. is a full service rigging company. They were looking to revamp their web presences with an all new website design and overhauled brand identity. The new site honors their commitment to the client experience, with easy-to-navigate actions, users flow to explore everything Riggit has to offer with ease, and use of photography and iconography for aesthetic benefit and storytelling.</p>
-            </a>
-          </div>
-        </div>
-        <div class="code-projects">
-          <h2>Code Projects</h2>
-          <div class="content-block">
-            <a href="https://github.com/nickjenvey/betme-gg" target="_blank">
-              <h3>Betme.gg</h3>
-              <h4>Stack: React, Express, Node, PostgresSQL, Sequalize, SCSS, PandaScore REST API</h4>
-              <p>A betting application allowing users to watch, see upcoming, and bet against their friends on esport matches. Betme.gg sources upcoming match data and results from Pandascore. Twitch integration allows users to watch the games right then and there and also offers chatting with other viewers. Active and historical bet information is stored and displayed for users on various pages. We also use a proprietary currency called GG.Coins which users can use to make bets and also earn to brag to their friends!</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://github.com/nickjenvey/chattyapp" target="_blank">
-              <h3>ChattyApp</h3>
-              <h4>Stack: React, Websocket</h4>
-              <p>A small instant messaging application. The application contains all basic functions of a chatroom: creating a unique username, joining chatrooms, and converse with other users.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://github.com/nickjenvey/pickle-decision-maker" target="_blank">
-              <h3>Pickle</h3>
-              <h4>Stack: HTML, SCSS, jQuery, PostgreSQL</h4>
-              <p>A full-stack web application helping users make a decision between a number of given options. User's are able to generate new polls, manage their polls and see results, and share their polls with friends using a unique link allowing them to vote!</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://github.com/nickjenvey/tweeter" target="_blank">
-              <h3>Tweeter</h3>
-              <h4>Stack: HTML, CSS, jQuery, AJAX, MongoDB</h4>
-              <p>A single-page Twitter replica. On top of the intensive work on front-end features, Tweeter also showcases dynamic use of databases and data-generation.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://github.com/nickjenvey/tinyapp" target="_blank">
-              <h3>TinyApp</h3>
-              <h4>Stack: Express, Node.js</h4>
-              <p>A simple URL-shortening web application. First week-long project at Lighthouse Labs. Project necessitated a thorough understanding of how HTTP works, templating, and the value of modular code.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://www.honigwine.com/" target="_blank">
-              <h3>Honig Vineyard and Winery</h3>
-              <h4>Stack: HTML, SCSS, jQuery, WineDirect</h4>
-              <p>Family owned and operated since 1964, Honig has been commited to producing high quality wines while also protecting the environment and supporting their community. Honig was a ground up build centered around user interaction and helping tell the story of this eco-conscious family business.</p>
-            </a>
-          </div>
-          <div class="content-block">
-            <a href="https://www.jeffersonvineyards.com/" target="_blank">
-              <h3>Jefferson Vineyards</h3>
-              <h4>Stack: HTML, SCSS, jQuery, WineDirect</h4>
-              <p>Jefferson Vineyards is a family owned winery and vineyard in Charlottesville, Virginia, located where Thomas Jefferson and Philip Mazzei first grew grapes almost 250 years ago. The rebuild focused on creating a more robust experience for customers by introducing an online store, and by adding the rich history of the lands.</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <p>© 2019 Nick Jenvey. Made in Vancouver, Canada.</p>
+      <h2>Let’s connect!</h2>
+      <p>Get in touch via <a href="#">email</a> or <a href="#">LinkedIn</a> for opportunities or just to say hi!</p>
     </div>
   </footer>
+
 </body>
 </html>
