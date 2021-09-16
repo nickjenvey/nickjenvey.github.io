@@ -78,7 +78,7 @@ header {
 }
 
 .logo a:hover svg {
-  fill: #516574;
+  fill: #ff0055;
 }
 
 .logo svg {
@@ -335,6 +335,10 @@ header {
 
   .hero h1, .work-section h1 {
     font-size: 32px;
+  }
+
+  .hero p {
+    line-height: 32px;
   }
 
   .work-section p {
