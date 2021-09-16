@@ -295,13 +295,13 @@ header {
 
 
 /* 600px Break Point */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   body {
     font-size: 16px;
   }
 
   a {
-    line-height: 28px;
+    line-height: normal;
   }
 
   .hide-mobile {
@@ -344,5 +344,9 @@ header {
 
   .work-section ul {
     padding-left: 40px;
+  }
+
+  .cta p {
+    line-height: 32px;
   }
 }
