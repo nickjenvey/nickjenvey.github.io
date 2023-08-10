@@ -118,6 +118,12 @@ header {
   font-size: 64px;
 }
 
+.gradient-text {
+  background: -webkit-linear-gradient(left, #772bff, #952bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero p {
   margin-top: 20px;
 }
@@ -148,6 +154,10 @@ header {
 
 .text-right {
   text-align: right;
+}
+
+.work p.cs {
+  color: #516574;
 }
 
 
