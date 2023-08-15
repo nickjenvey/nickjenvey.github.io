@@ -218,6 +218,20 @@ header {
   margin-top: 5px;
 }
 
+.work-section .inline-link {
+  color: #772bff;
+  line-height: normal;
+  border-bottom: none;
+}
+
+.work-section .inline-link:hover {
+  color: #952bff;
+  line-height: normal;
+  border-bottom: none;
+}
+
+
+
 /* CTA */
 .cta {
   background-color: #f6f8f9;
