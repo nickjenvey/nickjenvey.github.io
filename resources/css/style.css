@@ -20,6 +20,14 @@ time, mark, audio, video {
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  background: rgba(119, 43, 255, 0.2);
+}
+
+::selection {
+  background: rgba(119, 43, 255, 0.2);
+}
+
 
 
 /* Global */
@@ -78,7 +86,7 @@ header {
 }
 
 .logo a:hover svg {
-  fill: #772bff;
+  fill: #ae2bff;
 }
 
 .logo svg {
@@ -89,6 +97,15 @@ header {
 .nav {
   list-style: none;
   text-align: right;
+}
+
+.nav a {
+  color: #772bff;
+  border-bottom: none;
+}
+
+.nav a:hover {
+  color: #ae2bff;
 }
 
 .nav li {
@@ -116,12 +133,17 @@ header {
 
 .hero h1 {
   font-size: 64px;
+  cursor: default;
 }
 
-.gradient-text {
-  background: -webkit-linear-gradient(left, #772bff, #952bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.highlight-text {
+  display: inline;
+  color: #772bff;
+}
+
+.highlight-text:hover {
+  background-color: #ae2bff;
+  color: white;
 }
 
 .hero p {
@@ -225,7 +247,7 @@ header {
 }
 
 .work-section .inline-link:hover {
-  color: #952bff;
+  color: #ae2bff;
   line-height: normal;
   border-bottom: none;
 }
