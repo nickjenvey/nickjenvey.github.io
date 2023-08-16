@@ -356,6 +356,14 @@ header {
     visibility: hidden;
   }
 
+  .hero {
+    margin-top: 0px;
+  }
+
+  .work {
+    margin-top: 20px;
+  }
+
   .row {
     flex-direction: column;
   }
