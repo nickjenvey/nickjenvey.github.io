@@ -86,8 +86,7 @@ header {
 }
 
 .logo a:hover svg {
-  fill: #772bff;
-  background-color: #ae2bff; 
+  fill: #ae2bff;
 }
 
 .logo svg {
