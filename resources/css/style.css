@@ -1,3 +1,4 @@
+/* === RESET STYLES === */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,6 +21,9 @@ time, mark, audio, video {
   box-sizing: border-box;
 }
 
+
+
+/* === SELECTION === */
 ::-moz-selection {
   background: rgba(119, 43, 255, 0.2);
 }
@@ -30,7 +34,7 @@ time, mark, audio, video {
 
 
 
-/* Global */
+/* === GLOBAL === */
 body {
   background: #fff;
   font-family: -apple-system, system-ui, sans-serif;
@@ -67,7 +71,7 @@ img {
 
 
 
-/* Navigation */
+/* === NAVIGATION === */
 header {
   display: flex;
   align-items: center;
@@ -119,7 +123,7 @@ header {
 
 
 
-/* Homepage */
+/* === HOMEPAGE === */
 .container {
   max-width: 1200px;
   padding: 0 20px;
@@ -184,7 +188,7 @@ header {
 
 
 
-/* Project Page */
+/* === PROJECTS === */
 .work-section {
   max-width: 1200px;
   padding: 0 20px;
@@ -254,7 +258,7 @@ header {
 
 
 
-/* CTA */
+/* === CTA === */
 .cta {
   background-color: #f6f8f9;
   padding: 200px 0;
@@ -271,7 +275,7 @@ header {
 
 
 
-/* 1020px Break Point */
+/* === 1020 BREAK POINT === */
 @media only screen and (max-width: 1020px) {
   body {
     font-size: 21px;
@@ -308,7 +312,7 @@ header {
 
 
 
-/* 800px Break Point */
+/* === 800 BREAK POINT === */
 @media only screen and (max-width: 800px) {
   body {
     font-size: 18px;
@@ -341,7 +345,7 @@ header {
 
 
 
-/* 600px Break Point */
+/* === 600 BREAK POINT === */
 @media only screen and (max-width: 600px) {
   body {
     font-size: 16px;
