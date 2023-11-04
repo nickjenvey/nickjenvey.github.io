@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Nick Jenvey — UX/UI Designer</title>
+  <title>Nick Jenvey — User Experience Designer</title>
   <link rel="shortcut icon" type="image/jpg" href="resources/images/favicon.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.nickjenvey.com/">
@@ -17,7 +17,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="Hello robots and human. You found me you!">
   <link rel="stylesheet" href="resources/css/style.css">
-  <link rel="preload" href="resources/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,83 +32,142 @@
         </svg>
       </a>
     </div>
-    <ul class="nav">
-      <li>
-        <a href="mailto:nick@nickjenvey.com">Email</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/nickjenvey/">LinkedIn</a>
-      </li>
-      <li>
-        <a target="_blank" href="resources/files/Nick Jenvey - Resume.pdf">Resume</a>
-      </li>
-    </ul>
+    <nav>
+      <ul>
+        <li>
+          <a href="mailto:nick@nickjenvey.com">Email</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/nickjenvey/">LinkedIn</a>
+        </li>
+        <li>
+          <a target="_blank" href="resources/files/Nick Jenvey - Resume.pdf">Resume</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="container">
-    <section class="hero">
-      <h1>Hi, I am Nick Jenvey. I am a <span class="highlight-text">UX/UI</span> designer.</h1>
-      <!--<p>Currently a UX Designer at <a target="_blank" href="https://kabam.com/">Kabam.</a></p>-->
-    </section>
-    <section class="work">
-      <!--<a href="/">-->
-        <div class="row">
+  <main class="home">
+    <div class="hero">
+      <div class="container">
+        <h3>Hey, I'm Nick.</h3>
+        <h1>I'm a user experience designer.</h1>
+        <svg class="figma-cursor" width="120" height="51" viewBox="0 0 120 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_105_8)">
+          <path d="M8.09955 7.00591C7.99236 6.49361 8.54078 6.09516 8.99488 6.35541L27.0901 16.7261C27.5506 16.9899 27.4741 17.6761 26.9669 17.8321L18.1842 20.5338C18.0482 20.5756 17.9313 20.6639 17.8538 20.7833L13.4583 27.5544C13.1635 28.0084 12.4666 27.8782 12.3558 27.3483L8.09955 7.00591Z" fill="#2F81F7"/>
+          <path d="M8.69327 6.88169L26.7885 17.2523L18.0059 19.954C17.7339 20.0377 17.5 20.2143 17.345 20.453L12.9495 27.2241L8.69327 6.88169Z" stroke="white" stroke-width="1.21315"/>
+          </g>
+          <rect x="27.906" y="28.0247" width="92" height="22" fill="#2F81F7"/>
+          <path d="M42.2775 33.8428V44.0247H40.6368L35.8392 37.0893H35.7547V44.0247H33.9103V33.8428H35.5608L40.3534 40.7832H40.4429V33.8428H42.2775ZM44.2077 44.0247V36.3883H46.0074V44.0247H44.2077ZM45.1125 35.3045C44.8275 35.3045 44.5822 35.21 44.3767 35.0211C44.1712 34.8289 44.0685 34.5985 44.0685 34.3301C44.0685 34.0583 44.1712 33.8279 44.3767 33.639C44.5822 33.4468 44.8275 33.3507 45.1125 33.3507C45.4009 33.3507 45.6461 33.4468 45.8483 33.639C46.0538 33.8279 46.1565 34.0583 46.1565 34.3301C46.1565 34.5985 46.0538 34.8289 45.8483 35.0211C45.6461 35.21 45.4009 35.3045 45.1125 35.3045ZM51.189 44.1738C50.4267 44.1738 49.7721 44.0064 49.2253 43.6717C48.6817 43.3369 48.2624 42.8746 47.9674 42.2846C47.6758 41.6913 47.5299 41.0086 47.5299 40.2363C47.5299 39.4607 47.6791 38.7763 47.9774 38.183C48.2757 37.5864 48.6966 37.1224 49.2402 36.791C49.787 36.4562 50.4333 36.2889 51.1791 36.2889C51.7989 36.2889 52.3474 36.4032 52.8247 36.6319C53.3053 36.8573 53.6881 37.1771 53.9731 37.5914C54.2582 38.0024 54.4206 38.483 54.4603 39.0332H52.7402C52.6706 38.6653 52.5048 38.3587 52.243 38.1134C51.9845 37.8649 51.6381 37.7406 51.2039 37.7406C50.836 37.7406 50.5129 37.84 50.2345 38.0389C49.9561 38.2344 49.739 38.5161 49.5832 38.884C49.4307 39.2519 49.3545 39.6927 49.3545 40.2065C49.3545 40.7268 49.4307 41.1743 49.5832 41.5488C49.7357 41.92 49.9494 42.2067 50.2245 42.4089C50.503 42.6078 50.8294 42.7072 51.2039 42.7072C51.4691 42.7072 51.7061 42.6575 51.9149 42.558C52.127 42.4553 52.3043 42.3078 52.4468 42.1156C52.5894 41.9233 52.6871 41.6897 52.7402 41.4146H54.4603C54.4173 41.9548 54.2582 42.4337 53.9831 42.8514C53.708 43.2657 53.3334 43.5905 52.8595 43.8258C52.3855 44.0578 51.8287 44.1738 51.189 44.1738ZM57.5788 41.6284L57.5738 39.4558H57.8621L60.6065 36.3883H62.7095L59.3337 40.1468H58.9609L57.5788 41.6284ZM55.9381 44.0247V33.8428H57.7379V44.0247H55.9381ZM60.7308 44.0247L58.245 40.5495L59.458 39.2818L62.8835 44.0247H60.7308ZM71.4781 33.8428H73.3076V41.0019C73.3043 41.6582 73.1651 42.2233 72.89 42.6972C72.6149 43.1679 72.2305 43.5308 71.7366 43.786C71.2461 44.0379 70.6744 44.1639 70.0214 44.1639C69.4248 44.1639 68.8879 44.0578 68.4106 43.8457C67.9367 43.6302 67.5605 43.3121 67.2821 42.8911C67.0037 42.4702 66.8645 41.9465 66.8645 41.3201H68.699C68.7023 41.5952 68.7619 41.8322 68.878 42.0311C68.9973 42.2299 69.1613 42.3824 69.3701 42.4884C69.5789 42.5945 69.8192 42.6475 70.091 42.6475C70.386 42.6475 70.6362 42.5862 70.8417 42.4636C71.0472 42.3376 71.203 42.152 71.3091 41.9068C71.4184 41.6615 71.4748 41.3599 71.4781 41.0019V33.8428ZM78.6098 44.1738C77.8442 44.1738 77.183 44.0147 76.6262 43.6965C76.0727 43.375 75.6468 42.921 75.3485 42.3343C75.0502 41.7444 74.901 41.05 74.901 40.2512C74.901 39.4657 75.0502 38.7763 75.3485 38.183C75.6501 37.5864 76.071 37.1224 76.6113 36.791C77.1515 36.4562 77.7862 36.2889 78.5154 36.2889C78.986 36.2889 79.4302 36.3651 79.8478 36.5176C80.2687 36.6667 80.6399 36.8987 80.9614 37.2136C81.2862 37.5284 81.5414 37.9295 81.727 38.4167C81.9126 38.9006 82.0054 39.4773 82.0054 40.1468V40.6987H75.7462V39.4856H80.2803C80.277 39.1409 80.2024 38.8343 80.0566 38.5659C79.9107 38.2941 79.7069 38.0803 79.4451 37.9245C79.1865 37.7687 78.8849 37.6909 78.5402 37.6909C78.1723 37.6909 77.8492 37.7803 77.5708 37.9593C77.2924 38.135 77.0753 38.367 76.9195 38.6553C76.767 38.9404 76.6891 39.2536 76.6858 39.595V40.6539C76.6858 41.098 76.767 41.4792 76.9294 41.7974C77.0918 42.1123 77.3189 42.3542 77.6106 42.5232C77.9022 42.689 78.2436 42.7718 78.6347 42.7718C78.8965 42.7718 79.1335 42.7354 79.3456 42.6624C79.5578 42.5862 79.7417 42.4752 79.8975 42.3293C80.0533 42.1835 80.1709 42.0029 80.2505 41.7874L81.9309 41.9764C81.8248 42.4205 81.6226 42.8083 81.3243 43.1397C81.0293 43.4678 80.6515 43.723 80.1908 43.9053C79.7301 44.0843 79.2031 44.1738 78.6098 44.1738ZM85.3277 39.5502V44.0247H83.528V36.3883H85.2482V37.6859H85.3376C85.5133 37.2583 85.7934 36.9186 86.1778 36.6667C86.5656 36.4148 87.0446 36.2889 87.6146 36.2889C88.1416 36.2889 88.6007 36.4016 88.9918 36.6269C89.3862 36.8523 89.6911 37.1788 89.9065 37.6063C90.1253 38.0339 90.233 38.5526 90.2297 39.1624V44.0247H88.43V39.4409C88.43 38.9304 88.2974 38.5311 88.0322 38.2427C87.7704 37.9543 87.4075 37.8102 86.9435 37.8102C86.6286 37.8102 86.3485 37.8798 86.1033 38.019C85.8613 38.1549 85.6707 38.3521 85.5315 38.6106C85.3956 38.8691 85.3277 39.1823 85.3277 39.5502ZM98.6068 36.3883L95.8874 44.0247H93.8987L91.1793 36.3883H93.0983L94.8533 42.0609H94.9328L96.6928 36.3883H98.6068ZM102.973 44.1738C102.207 44.1738 101.546 44.0147 100.989 43.6965C100.436 43.375 100.01 42.921 99.7118 42.3343C99.4135 41.7444 99.2643 41.05 99.2643 40.2512C99.2643 39.4657 99.4135 38.7763 99.7118 38.183C100.013 37.5864 100.434 37.1224 100.975 36.791C101.515 36.4562 102.149 36.2889 102.879 36.2889C103.349 36.2889 103.793 36.3651 104.211 36.5176C104.632 36.6667 105.003 36.8987 105.325 37.2136C105.649 37.5284 105.905 37.9295 106.09 38.4167C106.276 38.9006 106.369 39.4773 106.369 40.1468V40.6987H100.109V39.4856H104.644C104.64 39.1409 104.566 38.8343 104.42 38.5659C104.274 38.2941 104.07 38.0803 103.808 37.9245C103.55 37.7687 103.248 37.6909 102.904 37.6909C102.536 37.6909 102.212 37.7803 101.934 37.9593C101.656 38.135 101.439 38.367 101.283 38.6553C101.13 38.9404 101.052 39.2536 101.049 39.595V40.6539C101.049 41.098 101.13 41.4792 101.293 41.7974C101.455 42.1123 101.682 42.3542 101.974 42.5232C102.265 42.689 102.607 42.7718 102.998 42.7718C103.26 42.7718 103.497 42.7354 103.709 42.6624C103.921 42.5862 104.105 42.4752 104.261 42.3293C104.417 42.1835 104.534 42.0029 104.614 41.7874L106.294 41.9764C106.188 42.4205 105.986 42.8083 105.688 43.1397C105.393 43.4678 105.015 43.723 104.554 43.9053C104.093 44.0843 103.566 44.1738 102.973 44.1738ZM108.791 46.8883C108.546 46.8883 108.319 46.8684 108.11 46.8286C107.905 46.7922 107.74 46.7491 107.618 46.6994L108.035 45.2974C108.297 45.3736 108.531 45.4101 108.736 45.4068C108.942 45.4034 109.123 45.3388 109.278 45.2129C109.437 45.0902 109.572 44.8847 109.681 44.5964L109.835 44.1837L107.066 36.3883H108.975L110.735 42.1553H110.815L112.579 36.3883H114.494L111.436 44.9494C111.293 45.3537 111.105 45.7001 110.869 45.9884C110.634 46.2801 110.346 46.5022 110.004 46.6546C109.666 46.8104 109.262 46.8883 108.791 46.8883Z" fill="white"/>
+          <defs>
+          <filter id="filter0_d_105_8" x="5.65963" y="5.06028" width="24.1619" height="26.4102" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="1.21315"/>
+          <feGaussianBlur stdDeviation="1.21315"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0"/>
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_105_8"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_105_8" result="shape"/>
+          </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div class="work">
+      <div class="container">
+        <a class="card disabled" href="/">
           <div class="text">
-            <h2>Designing a social system for Marvel Contest of Champions</h2>
-            <p>Kabam</p>
-            <p class="cs">Coming soon</p>
+            <h2>Marvel Contest of Champions</h2>
+            <p class="stack">Mobile game // UX design</p>
+            <p>Designing a social system to help players find gaming communities.</p>
+            <div class="not-avail">
+              Case study available upon request
+            </div>
           </div>
           <div class="image">
-            <img src="resources/images/mcoc_0.jpg">
+            <img src="resources/images/mcoc_0.png">
           </div>
-        </div>
-      <!--</a>-->
-      <a href="/coastcapital">
-        <div class="row">
+        </a>
+        <a class="card" href="/coastcapital">
           <div class="text">
-            <h2>Building a corporate digital banking platform</h2>
-            <p>Coast Capital Savings</p>
+            <h2>Coast Capital Savings</h2>
+            <p class="stack">Web platform // UX design</p>
+            <p>Building a corporate digital banking platform.</p>
+            <button>
+              View case study
+              <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
+                <path class="arrow-stem" d="M1.75 8H11"></path>
+              </svg>
+            </button>
           </div>
           <div class="image">
-            <img src="resources/images/ccs_0.jpg">
+            <img src="resources/images/ccs_0.png">
           </div>
-        </div>
-      </a>
-      <a href="/stateofdecay">
-        <div class="row">
+        </a>
+        <a class="card" href="/stateofdecay">
           <div class="text">
-            <h2>Designing the complete UX framework for State of Decay</h2>
-            <p>Sprung Studios</p>
+            <h2>State of Decay 3</h2>
+            <p class="stack">PC + Console game // UX/UI design</p>
+            <p>Creating the entire UX framework for State of Decay.</p>
+            <button>
+              View case study
+              <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
+                <path class="arrow-stem" d="M1.75 8H11"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="image webp">
+            <img src="resources/images/sod3_0.webp">
+          </div>
+        </a>
+        <a class="card" href="/playstudios">
+          <div class="text">
+            <h2>PlayStudios</h2>
+            <p class="stack">Web platform // UX/UI design</p>
+            <p>A platform for engagement and content management.</p>
+            <button>
+              View case study
+              <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
+                <path class="arrow-stem" d="M1.75 8H11"></path>
+              </svg>
+            </button>
           </div>
           <div class="image">
-            <img src="resources/images/sod3_0.jpg">
+            <img src="resources/images/ps_0.png">
           </div>
-        </div>
-      </a>
-      <a href="/playstudios">
-        <div class="row">
-          <div class="text">
-            <h2>Creating a platform for engagement and content management</h2>
-            <p>Sprung Studios</p>
-          </div>
-          <div class="image">
-            <img src="resources/images/ps_0.jpg">
-          </div>
-        </div>
-      </a>
-      <a href="/spectra">
-        <div class="row">
-          <div class="text">
-            <h2>Designing an e-commerce template for Commerce7</h2>
-            <p>Wine Works</p>
-          </div>
-          <div class="image">
-            <img src="resources/images/spectra_0.jpg">
-          </div>
-        </div>
-      </a>
-    </section>
-  </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        <p>Version 5.0. © 2023 Nick Jenvey. All rights reserved.</p>
+      </div>
+      <div class="social">
+        <ul>
+          <li>
+            <a href="mailto:nick@nickjenvey.com">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nickjenvey/">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
