@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Marvel Content of Champions — Nick Jenvey</title>
+  <title>Marvel Contest of Champions — Nick Jenvey</title>
   <link rel="shortcut icon" type="image/jpg" href="resources/images/favicon.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.nickjenvey.com/">
@@ -19,10 +19,10 @@
   <link rel="stylesheet" href="resources/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="light">
 
   <header>
     <div class="logo">
@@ -32,18 +32,155 @@
         </svg>
       </a>
     </div>
-    <ul class="nav">
-      <li>
-        <a href="mailto:nick@nickjenvey.com">Email</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/nickjenvey/">LinkedIn</a>
-      </li>
-      <li>
-        <a target="_blank" href="resources/files/Nick Jenvey - Resume.pdf">Resume</a>
-      </li>
-    </ul>
+    <nav>
+      <ul>
+        <li>
+          <a target="_blank"href="https://www.linkedin.com/in/nickjenvey/">LinkedIn</a>
+        </li>
+        <li>
+          <a target="_blank" href="resources/files/Nick Jenvey - Resume.pdf">Resume</a>
+        </li>
+        <li>
+          <a href="#footer">Connect</a>
+        </li>
+      </ul>
+    </nav>
   </header>
+
+  <main class="project">
+    <div class="hero">
+      <div class="container">
+        <h1>Marvel Contest of Champions</h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <p>Marvel Contest of Champions (MCOC) is a 1v1 arcade-style fighting game designed for mobile devices. Players, known as "Summoners," assemble teams of Marvel heroes and villains to participate in multiplayer battles, role-playing quests, and story modes. Central to the late-game experience is the community feature called Alliances, which allows up to 30 players to work together in Alliance Events, Alliance Quests, and Alliance Wars.</p>
+        <p>During my time as a UX Designer at Kabam, I researched and designed new multiplayer features and game modes for MCOC, including a new social system that increased player retention and spending rates by approximately 28% over the previous system. I collaborated with game designers and engineers to define feature requirements and roadmaps, prototyped and play-tested new systems with the game community, and advocated for the needs of players. My primary focus was enhancing the Alliance System, a core feature of MCOC’s multiplayer experience. I worked closely with a Social Systems Designer, the multiplayer development team, game designers, and the User Experience Research (UXR) team to address key challenges and create a more meaningful and frictionless experience for players seeking alliances.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <img src="resources/images/mcoc_1.jpg">
+        <img src="resources/images/mcoc_2.jpg">
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h2>Challenge</h2>
+        <p>Many players in MCOC were frequently hopping between alliances, often staying for only a few days before leaving to join another. This behavior stemmed from issues with the existing auto-join feature, which lacked sophistication and often placed players into alliances that:</p>
+        <ul>
+          <li>Were inactive or "dead," undermining the purpose of joining an alliance.</li>
+          <li>Used a different primary language, leading to communication barriers.</li>
+          <li>Were mismatched in terms of player level and progression, making collaboration difficult.</li>
+        </ul>
+        <p>The lack of a reliable system for finding suitable alliances not only hindered players from engaging in late-game activities but also contributed to player drop-off around level 20, a critical point in MCOC's player retention funnel.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <img src="resources/images/mcoc_3.jpg">
+        <figcaption>Screens from the previous auto-join system, demonstrating the challenges players faced with random placements into inactive or incompatible alliances.</figcaption>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h2>Research</h2>
+        <p>To validate our hypothesis and uncover deeper insights, we partnered with the UXR team to conduct interviews with players. Key findings included:</p>
+        <ul>
+          <li>Players using the auto-join feature were often dissatisfied due to mismatches in activity levels, language, and progression.</li>
+          <li>The average alliance-hopping player fell within MCOC's typical drop-off range (around level 20), suggesting that the inability to find a meaningful community contributed to player attrition.</li>
+        </ul>
+        <p>Additionally, I conducted a competitive analysis of multiplayer games like World of Warcraft, Clash of Clans, Runescape, and Albion Online. These games heavily emphasized social interaction but often relied on external platforms like Discord or Reddit for recruitment. This reliance created barriers for less "hardcore" players, who were unlikely to engage with third-party tools to find a community.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <img src="resources/images/mcoc_4.jpg">
+        <figcaption>A breakdown of external tools like Discord and Reddit used for recruitment in other multiplayer games, highlighting the lack of in-game community-building tools.</figcaption>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h2>Ideation & Design</h2>
+        <p>To address these issues, we drew inspiration from dating apps, applying their matchmaking logic to create a guided, frictionless system for connecting players with compatible alliances. Our solution focused on improving both the player and alliance experience.</p>
+        <ol>
+          <li><b>Player Profiles and Questionnaires</b>:
+            <ul>
+              <li>Players completed a short questionnaire covering topics like play frequency, playstyle, desired social interaction level, and languages spoken.</li>
+              <li>An "Importance" option allowed players to prioritize certain preferences, helping the matchmaking logic curate a list of alliances that matched their needs.</li>
+              <li>Advanced questions were included for experienced players to narrow down preferences based on end-game activities and goals.</li>
+            </ul>
+          </li>
+          <li><b>Alliance Profiles and Recruitment Tools</b>:
+            <ul>
+              <li>Alliances created detailed profiles showcasing their activity level, focus areas (e.g., PVP vs. PVE), language preferences, and member stats.</li>
+              <li>A "Find Members" tool allowed alliances to search for players who fit their requirements, using filters like champion pool, progression level, and past rankings.</li>
+            </ul>
+          </li>
+          <li><b>Streamlined Matchmaking</b>:
+            <ul>
+              <li>Players received curated lists of alliances based on their profiles, removing the randomness of the previous auto-join system.</li>
+              <li>Alliances could vet potential recruits within the game, eliminating the need to rely on external platforms for screenshots or communication.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <img src="resources/images/mcoc_5.jpg">
+        <img src="resources/images/mcoc_6.jpg">
+        <figcaption>Key screens from the design phase, illustrating the development of player and alliance profiles, matchmaking logic, and enhanced recruitment tools.</figcaption>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h2>Prototyping & Testing</h2>
+        <p>I designed prototypes for the revamped Alliance System, including player and alliance profile pages, matchmaking questionnaires, and the "Find Members" feature. The prototypes were tested by the UXR team with existing and new players. Key insights included:</p>
+        <ul>
+          <li><b>Increased Engagement</b>: New players appreciated the streamlined process for finding active and compatible alliances, leading to predictions of higher retention rates.</li>
+          <li><b>Improved Recruitment</b>: Experienced players and alliance leaders valued the ability to search for and filter recruits based on detailed metrics.</li>
+          <li><b>Positive Feedback</b>: Testers described the system as intuitive and significantly less frustrating than the previous auto-join feature.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h2>Outcomes</h2>
+        <p>While the feature has yet to launch, early feedback from stakeholders and user testing has been promising. Key anticipated outcomes include:</p>
+        <ul>
+          <li><b>Higher Retention Rates</b>: By fostering meaningful connections early on, new players are expected to remain engaged beyond the level 20 drop-off range.</li>
+          <li><b>Increased Spending</b>: Experienced players who find suitable alliances are more likely to invest in power-ups and champion enhancements to support end-game progression.</li>
+          <li><b>Stakeholder Enthusiasm</b>: Top-tier alliances praised the recruitment tools, recognizing their potential to streamline and enhance the recruitment process.</li>
+        </ul>
+        <p>Additionally, I conducted a competitive analysis of multiplayer games like World of Warcraft, Clash of Clans, Runescape, and Albion Online. These games heavily emphasized social interaction but often relied on external platforms like Discord or Reddit for recruitment. This reliance created barriers for less "hardcore" players, who were unlikely to engage with third-party tools to find a community.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h2>Conclusion</h2>
+        <p>This project highlighted the importance of fostering community within multiplayer games. By addressing player pain points and leveraging innovative matchmaking logic, we created a system that promotes meaningful connections and long-term engagement. Collaborating across teams and incorporating player feedback at every stage ensured that the new Alliance System is both player-focused and strategically aligned with MCOC's goals for retention and monetization.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+
+    <div class="container">
+      <div class="contact">
+        <h2>Get in touch!</h2>
+        <p>
+          <a href="mailto:nick@nickjenvey.com" class="inline-link">Shoot me an email</a> or <a href="https://www.linkedin.com/in/nickjenvey/" class="inline-link">connect with me on LinkedIn</a>, and let's discuss how we can work together.
+        </p>
+      </div>
+      <div class="copyright">
+        <p>© 2023 Nick Jenvey. All rights reserved.</p>
+        <p>V5.1</p>
+      </div>
+    </div>
+
+  </footer>
 
 </body>
 </html>

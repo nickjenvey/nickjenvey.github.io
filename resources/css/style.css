@@ -465,7 +465,8 @@ footer .container {
   margin: 0 auto 1rem;
 }
 
-.project ul {
+.project ul,
+.project ol {
   font-size: clamp(1rem, 3vw, 1.25rem);
   line-height: 150%;
   max-width: 800px;
@@ -494,6 +495,10 @@ footer .container {
 
 .light .contact {
   border-top: 1px solid rgba(12,11,20,0.15);
+}
+
+b {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 675px) {
