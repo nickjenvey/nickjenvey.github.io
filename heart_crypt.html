@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+          font-family: "Comic Sans MS", "Comic Sans", cursive;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          position: relative;
+          background-image: url(./resources/images/vbg.jpg);
+          text-align: center;
+          overflow-x: hidden;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          border: 3px outset #000;
+          padding: 20px 60px;
+          background: #C0C0C0;
+          position: relative;
+          z-index: 1;
+          max-width: 90%;
+        }
+
+        .heart {
+            position: absolute;
+            width: 50px;
+            animation: heartAnimation 3s linear infinite;
+        }
+
+        @keyframes heartAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .heart:nth-child(1) {
+            top: 5%; left: 10%; animation-duration: 4s;
+        }
+        .heart:nth-child(2) {
+            top: 20%; left: 30%; animation-duration: 3.5s;
+        }
+        .heart:nth-child(3) {
+            top: 35%; left: 50%; animation-duration: 3.8s;
+        }
+        .heart:nth-child(4) {
+            top: 50%; left: 70%; animation-duration: 4.2s;
+        }
+        .heart:nth-child(5) {
+            top: 60%; left: 20%; animation-duration: 3.2s;
+        }
+        .heart:nth-child(6) {
+            top: 80%; left: 40%; animation-duration: 3.6s;
+        }
+        .heart:nth-child(7) {
+            top: 25%; left: 80%; animation-duration: 4.4s;
+        }
+        .heart:nth-child(8) {
+            top: 15%; left: 60%; animation-duration: 3.3s;
+        }
+        .heart:nth-child(9) {
+            top: 70%; left: 10%; animation-duration: 4.1s;
+        }
+        .heart:nth-child(10) {
+            top: 55%; left: 80%; animation-duration: 3.9s;
+        }
+        .heart:nth-child(11) {
+            top: 40%; left: 25%; animation-duration: 4.3s;
+        }
+        .heart:nth-child(12) {
+            top: 75%; left: 55%; animation-duration: 3.7s;
+        }
+
+        h1 {
+          padding: 0;
+          margin: 0;
+        }
+
+        .buttons {
+        }
+
+        button {
+          font-family: "Comic Sans MS", "Comic Sans", cursive;
+          font-size: 1.2rem;
+          padding: 10px 20px;
+          margin: 0 10px;
+          cursor: pointer;
+          border: 3px outset #000;
+          background: #E8E8E8;
+          color: #800080;
+          text-decoration: underline;
+          transition: background-color 0.3s ease;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+        }
+
+        /* Modal Styles */
+        #videoModal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Overlay */
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        #videoModal iframe {
+            width: 80%;
+            height: 80%;
+        }
+
+        /* Media Query for mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+                max-width: 100%;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Floating hearts positioned randomly across the page -->
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    <img src="resources/images/vheart.png" class="heart" />
+    
+    <div class="container">
+        <h1>Will you be my Valentine?</h1>
+        
+        <div class="buttons">
+            <button id="yesButton" onclick="changeButtonText('yes')">Yes</button>
+            <button id="noButton" onclick="changeButtonText('no')">No</button>
+        </div>
+    </div>
+
+    <!-- Modal for YouTube Video -->
+    <div id="videoModal">
+        <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        let yesClickCount = 0;
+        let noClickCount = 0;
+
+        function changeButtonText(buttonClicked) {
+            if (buttonClicked === 'no') {
+                noClickCount++;
+                if (noClickCount === 1) {
+                    document.getElementById('noButton').textContent = 'Why not?';
+                } else if (noClickCount === 2) {
+                    document.getElementById('noButton').textContent = 'Well, that’s just rude';
+                } else if (noClickCount === 3) {
+                    document.getElementById('noButton').textContent = 'Ouch... that stings';
+                } else if (noClickCount === 4) {
+                    document.getElementById('noButton').textContent = 'I’ll just be here... crying';
+                } else if (noClickCount === 5) {
+                    document.getElementById('noButton').textContent = 'You monster';
+                } else if (noClickCount === 6) {
+                    document.getElementById('noButton').textContent = 'Oh well, too bad...';
+                    document.getElementById('noButton').disabled = true;
+                    setTimeout(function() {
+                        document.getElementById('noButton').style.display = 'none';
+                    }, 5000);
+                }
+            } else if (buttonClicked === 'yes') {
+                // Open the YouTube modal and play the video
+                document.getElementById('videoModal').style.display = 'flex';
+                document.getElementById('videoFrame').src = 'https://www.youtube.com/embed/wArac8bQ4nE?autoplay=1';
+            }
+        }
+    </script>
+</body>
+</html>
