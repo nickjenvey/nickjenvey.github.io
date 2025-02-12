@@ -4,129 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hover Glitch Effect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js"></script>
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      overflow: hidden;
       background: #101214;
       color: white;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    #logo-container {
-      position: relative;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      visibility: visible;
-    }
-
-    #header-logo {
-      width: 120px;
-      height: 120px;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .content {
-      margin-top: 30px;
-    }
-
-    a {
+    /* Style for links and SVGs */
+    a, svg {
       color: white;
-      font-size: 20px;
+      font-size: 30px;
+      font-weight: bold;
       text-decoration: none;
-      position: relative;
       display: inline-block;
-      transition: all 0.2s ease-in-out;
+      position: relative;
+      overflow: hidden;
     }
 
-    a:hover {
-      color: #ff00ff;
+    /* Glitch Effect */
+    a::before, a::after, svg::before, svg::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
     }
 
-    /* Animation for glitch effect */
-    @keyframes glitch {
+    a::before, svg::before {
+      animation: glitch-anim 1s infinite;
+      background: #101214;
+    }
+
+    a::after, svg::after {
+      animation: glitch-anim-2 1s infinite;
+      background: #101214;
+    }
+
+    /* Keyframes for glitch effect */
+    @keyframes glitch-anim {
       0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      25% {
-        transform: translateX(-4px);
+        transform: translateX(-2px) skew(-2deg);
         opacity: 0.8;
+        background-color: red;
       }
       50% {
-        transform: translateX(4px);
-        opacity: 0.8;
-      }
-      75% {
-        transform: translateX(-4px);
-        opacity: 0.8;
+        transform: translateX(3px) skew(2deg);
+        opacity: 1;
+        background-color: green;
       }
       100% {
-        transform: translateX(0);
-        opacity: 1;
+        transform: translateX(-2px) skew(-2deg);
+        opacity: 0.8;
+        background-color: blue;
       }
     }
 
-    .glitch-link:hover {
-      animation: glitch 0.5s infinite linear;
+    @keyframes glitch-anim-2 {
+      0% {
+        transform: translateX(2px) skew(2deg);
+        opacity: 0.6;
+        background-color: yellow;
+      }
+      50% {
+        transform: translateX(-4px) skew(-4deg);
+        opacity: 1;
+        background-color: purple;
+      }
+      100% {
+        transform: translateX(2px) skew(2deg);
+        opacity: 0.6;
+        background-color: orange;
+      }
     }
 
-    .glitch-logo:hover {
-      animation: glitch 0.5s infinite linear;
+    /* Hover effect */
+    a:hover::before, a:hover::after, svg:hover::before, svg:hover::after {
+      animation: none;
     }
-
   </style>
 </head>
 <body>
+  <!-- Example Text Links -->
+  <a href="#" data-text="Hover Over Me">Hover Over Me</a>
 
-  <div id="logo-container">
-    <svg id="header-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="60" r="50" stroke="black" stroke-width="10" fill="none"/>
-    </svg>
-  </div>
-
-  <div class="content">
-    <h2>Hover over the SVG or links below</h2>
-    <a href="#" class="glitch-link">Link 1</a>
-    <a href="#" class="glitch-link">Link 2</a>
-    <a href="#" class="glitch-link">Link 3</a>
-  </div>
+  <!-- Example SVG Icon -->
+  <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="white" />
+  </svg>
 
   <script>
-    // Create Glitch Effect on Links
-    function handleMouseOver(e) {
-      let el = e.target;
-      while (el && el.tagName.toLowerCase() !== 'a') {
-        el = el.parentNode;
-      }
-      if (!el) {
-        return;
-      }
-      el.classList.add('glitch-link');
-
-      let handleMouseOut = function() {
-        el.removeEventListener('mouseout', handleMouseOut);
-        el.classList.remove('glitch-link');
-      }
-
-      el.addEventListener('mouseout', handleMouseOut);
-    }
-
-    // Add glitch effect to the links
-    const linkEls = document.querySelectorAll('.glitch-link');
-    for (let i = 0; i < linkEls.length; i++) {
-      linkEls[i].addEventListener('mouseover', handleMouseOver);
-    }
-
-    // Add glitch effect to the logo
-    const logo = document.querySelector('#header-logo');
-    logo.classList.add('glitch-logo');
+    // For SVG, add `data-text` attribute automatically to apply glitch text to SVG elements
+    const svgs = document.querySelectorAll('svg');
+    svgs.forEach(svg => {
+      svg.setAttribute('data-text', svg.getAttribute('data-text') || 'SVG Icon');
+    });
   </script>
-
 </body>
 </html>
