@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hover Effect Demo</title>
+  <title>Hover Glitch Effect</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/dynamics.js@1.0.0/dynamics.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js"></script>
@@ -13,109 +13,153 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-    }
-
-    #page {
-      width: 100%;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
-
-    #logo-container {
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      visibility: hidden;
-    }
-
-    #intro {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #101214;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
+      background: #101214;
+      color: white;
       text-align: center;
     }
 
-    .content {
-      position: absolute;
-      top: 50%;
+    #logo-container {
+      position: relative;
+      top: 20%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      visibility: hidden;
+      transform: translateX(-50%);
+      visibility: visible;
     }
+
+    #header-logo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .content {
+      margin-top: 30px;
+    }
+
+    a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    a:hover {
+      color: #ff00ff;
+    }
+
   </style>
 </head>
 <body>
 
-  <div id="page">
-    <div id="intro">
-      <div>
-        <h1>Welcome to My Site</h1>
-        <p>This is the intro text</p>
-      </div>
-    </div>
+  <div id="logo-container">
+    <svg id="header-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="50" stroke="black" stroke-width="10" fill="none"/>
+    </svg>
+  </div>
 
-    <div id="logo-container">
-      <svg id="header-logo" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 10,10 L 110,10 L 110,110 L 10,110 Z" stroke="black" fill="none"/>
-      </svg>
-    </div>
-
-    <div id="content" class="content">
-      <h2>Hover Effect Demo</h2>
-      <p>Check out this hover effect</p>
-    </div>
-
-    <div id="clip-paths">
-      <g></g>
-    </div>
-
+  <div class="content">
+    <h2>Hover over the SVG or links below</h2>
+    <a href="#" class="glitch-link">Link 1</a>
+    <a href="#" class="glitch-link">Link 2</a>
+    <a href="#" class="glitch-link">Link 3</a>
   </div>
 
   <script>
-    // Helper Functions
-    function createEl(template) {
-      let el = document.createElement('div');
-      el.innerHTML = template.trim();
-      return el.firstChild;
+    // Create Glitch Effect on Links
+    function animateLink(el) {
+      let animating = true;
+      let box = el.getBoundingClientRect();
+
+      let animate = function() {
+        let masks = createMasksWithStripes(3, box, 3);
+        let clonedEls = [];
+
+        for (let i = 0; i < masks.length; i++) {
+          let clonedEl = cloneAndStripeElement(el, masks[i], document.body);
+          let childrenEls = Array.prototype.slice.apply(clonedEl.querySelectorAll('path'));
+          childrenEls.push(clonedEl);
+          for (let k = 0; k < childrenEls.length; k++) {
+            let color = tinycolor(`hsl(${Math.round(Math.random() * 360)}, 80%, 65%)`);
+            let rgb = color.toRgbString();
+            dynamics.css(childrenEls[k], {
+              color: rgb,
+              fill: rgb,
+            });
+          }
+          clonedEl.style.display = '';
+          clonedEls.push(clonedEl);
+        }
+
+        for (let i = 0; i < clonedEls.length; i++) {
+          let clonedEl = clonedEls[i];
+          dynamics.css(clonedEl, {
+            translateX: Math.random() * 10 - 5,
+          });
+
+          dynamics.setTimeout(function() {
+            dynamics.css(clonedEl, {
+              translateX: 0,
+            });
+          }, 50);
+
+          dynamics.setTimeout(function() {
+            dynamics.css(clonedEl, {
+              translateX: Math.random() * 5 - 2.5,
+            });
+          }, 100);
+
+          dynamics.setTimeout(function() {
+            document.body.removeChild(clonedEl);
+          }, 150);
+        }
+
+        dynamics.setTimeout(function() {
+          if(animating) {
+            animate();
+          }
+          for (let i = 0; i < masks.length; i++) {
+            let maskEl = document.querySelector(`#${masks[i]}`);
+            maskEl.parentNode.removeChild(maskEl);
+          }
+        }, Math.random() * 1000);
+      };
+
+      animate();
+
+      return {
+        stop: function() {
+          animating = false;
+        },
+      };
+    };
+
+    function handleMouseOver(e) {
+      let el = e.target;
+      while (el && el.tagName.toLowerCase() !== 'a') {
+        el = el.parentNode;
+      }
+      if (!el) {
+        return;
+      }
+      let r = animateLink(el);
+
+      let handleMouseOut = function(e) {
+        el.removeEventListener('mouseout', handleMouseOut);
+        r.stop();
+      }
+
+      el.addEventListener('mouseout', handleMouseOut);
     }
 
-    function createSvgEl(template) {
-      let el = createEl(`
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">${template.trim()}</svg>
-      `);
-      return el;
-    }
-
-    function createSvgChildEl(template) {
-      return createSvgEl(template).firstChild;
-    }
-
-    function createLine(options) {
-      let el = createSvgChildEl(`
-        <rect x="${options.x}" y="${options.y}" width="${options.width}" height="${options.height}" fill="${options.color}">
-      `);
-      return el;
-    }
-
-    // Create Masks with Stripes
-    let totalMaskIdx = 0;
     function createMasksWithStripes(count, box, averageHeight = 10) {
       let masks = [];
       for (let i = 0; i < count; i++) {
         masks.push([]);
       }
       let maskNames = [];
-      for (let i = totalMaskIdx; i < totalMaskIdx + masks.length; i++) {
+      for (let i = 0; i < masks.length; i++) {
         maskNames.push(`clipPath${i}`);
       }
-      totalMaskIdx += masks.length;
+
       let maskIdx = 0;
       let x = 0;
       let y = 0;
@@ -185,141 +229,63 @@
       return el;
     }
 
-    // Animate Functions
-    function animateBlackStripes(container, options = {}) {
-      options.sizeRatio = 3;
-      options.color = '#101214';
-      options.delay = function (type, i) {
-        if (type === 'show') {
-          return Math.random() * 50;
-        } else if (type === 'transform') {
-          return Math.random() * 20 + i * 2;
-        } else if (type === 'hide') {
-          return 100;
-        }
-      };
-      options.transform = function (size) {
-        return {
-          width: size.width / 2,
-          height: size.height / 5,
-        };
-      };
-      _animateStripes(container, options);
+    // Attach the hover effect to all links
+    const linkEls = document.querySelectorAll('.glitch-link');
+    for (let i = 0; i < linkEls.length; i++) {
+      linkEls[i].addEventListener('mouseover', handleMouseOver);
     }
 
-    function animateColoredStripes(container, options = {}) {
-      options.delay = function (type, i) {
-        if (type === 'show') {
-          return Math.random() * 300;
-        } else if (type === 'transform') {
-          return Math.random() * 20;
-        } else if (type === 'hide') {
-          return 100;
-        }
-      };
-      options.transform = function (size) {
-        return {
-          width: size.width / 2,
-          height: size.height / 5,
-        };
-      };
-      _animateStripes(container, options);
-    }
+    // Create Glitch Effect on Logo
+    function animateLogo() {
+      let el = document.querySelector('#header-logo');
+      let box = el.getBoundingClientRect();
+      let count = 10 + Math.random() * 10;
+      let masks = createMasksWithStripes(count, box, Math.round(100 / count));
+      let clonedEls = [];
 
-    function _animateStripes(container, options = {}) {
-      options.count = options.count || 10;
-      options.sizeRatio = options.sizeRatio || 1;
-      let stripes = [];
-      for (let i = 0; i < options.count; i++) {
-        let color = options.color || tinycolor(`hsl(${Math.round(Math.random() * 360)}, 80%, 65%)`).toRgbString();
-        let baseWidth = Math.max(window.innerWidth, 1000);
-        let width = Math.round(baseWidth / 10 + Math.random() * baseWidth / 10) * options.sizeRatio;
-        let height = Math.round(Math.random() * 10 + 2) * options.sizeRatio;
-        let point = options.point || {
-          x: Math.round((window.innerWidth + width) * Math.random() - width),
-          y: Math.round(window.innerHeight * Math.random()),
-        };
-        let lineOptions = {
-          x: point.x,
-          y: point.y,
-          width: width,
-          height: height,
-          color: color,
-        };
-        let lineEl = createLine(lineOptions);
-        lineEl.style.display = 'none';
-        container.appendChild(lineEl);
-
-        dynamics.setTimeout(function () {
-          lineEl.style.display = 'block';
-
-          dynamics.setTimeout(function () {
-            lineOptions.x += Math.random() * 100 - 50;
-            lineOptions.y += Math.random() * 20 - 10;
-            lineEl.setAttribute('x', lineOptions.x);
-            lineEl.setAttribute('y', lineOptions.y);
-
-            let newLineOptions = options.transform({
-              width: lineOptions.width,
-              height: lineOptions.height,
-            });
-            lineEl.setAttribute('width', newLineOptions.width);
-            lineEl.setAttribute('height', newLineOptions.height);
-
-            dynamics.setTimeout(function () {
-              container.removeChild(lineEl);
-            }, options.delay('hide', i));
-          }, options.delay('transform', i));
-        }, options.delay('show', i));
-
-        stripes.push(lineEl);
+      for (let i = 0; i < masks.length; i++) {
+        let clonedEl = cloneAndStripeElement(el, masks[i], document.body);
+        let path = clonedEl.querySelector('path');
+        let color = tinycolor(`hsl(${Math.round(Math.random() * 360)}, 80%, 65%)`);
+        dynamics.css(path, {
+          fill: color.toRgbString(),
+        });
+        clonedEls.push(clonedEl);
       }
-      return stripes;
-    }
 
-    // Animation Start
-    (function () {
-      animateBlackStripes(document.querySelector('#intro'), { count: 200 });
-      animateColoredStripes(document.querySelector('#intro'), { count: 100 });
+      for (let i = 0; i < clonedEls.length; i++) {
+        let clonedEl = clonedEls[i];
+        let d = Math.random() * 100;
 
-      let logoContainer = document.querySelector('#logo-container');
-      dynamics.css(logoContainer, {
-        scale: 0.5,
-        translateX: Math.random() * 100 - 50,
-      });
+        dynamics.setTimeout(function() {
+          clonedEl.style.display = '';
+          dynamics.css(clonedEl, {
+            translateX: Math.random() * 100 - 50,
+          });
+        }, d);
 
-      dynamics.setTimeout(function () {
-        dynamics.css(logoContainer, {
-          translateX: 10,
-          scale: 0.55,
-        });
-      }, 100);
+        dynamics.setTimeout(function() {
+          dynamics.css(clonedEl, {
+            translateX: Math.random() * 20 - 10,
+          });
+        }, d + 50);
 
-      dynamics.setTimeout(function () {
-        dynamics.css(logoContainer, {
-          translateX: 0,
-          scale: 0.5,
-        });
-      }, 150);
+        dynamics.setTimeout(function() {
+          dynamics.css(clonedEl, {
+            translateX: Math.random() * 5 - 2.5,
+          });
+        }, d + 100);
 
-      dynamics.setTimeout(function () {
-        logoContainer.style.visibility = 'visible';
-      }, 1);
+        dynamics.setTimeout(function() {
+          document.body.removeChild(clonedEl);
+        }, d + 150);
+      }
+    };
 
-      dynamics.setTimeout(function () {
-        animateBlackStripes(document.querySelector('#intro'), { count: 200 });
-        animateColoredStripes(document.querySelector('#intro'), { count: 100 });
-      }, 1000);
-
-      dynamics.setTimeout(function () {
-        introEl.style.backgroundColor = 'transparent';
-        dynamics.css(logoContainer, {
-          scale: 1,
-          translateX: Math.random() * window.innerWidth - window.innerWidth / 2,
-          translateY: Math.random() * window.innerHeight - window.innerHeight / 2,
-        });
-      }, 1300);
-    })();
+    // Trigger the logo animation on hover
+    const logo = document.querySelector('#header-logo');
+    logo.addEventListener('mouseover', animateLogo);
   </script>
+
 </body>
 </html>
